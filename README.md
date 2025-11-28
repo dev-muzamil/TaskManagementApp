@@ -1,69 +1,98 @@
-# Task Management App
+📱 Task Management App
 
-A simple Flutter task management application that demonstrates local persistence, a clean UI, and platform splash screen configuration.
+A simple and efficient task management application built with Flutter.
+This app allows users to create, update, and delete tasks with a clean UI and native splash screen support.
 
-**Repository:** https://github.com/dev-muzamil/TaskManagementApp
+🚀 Features
 
-**Current Branch:** `main`
+✔️ Add, update, and delete tasks
 
-**Quick Links:** `lib/main.dart`, `lib/screens/home_screen.dart`, `lib/models/task.dart`, `lib/widgets/task_tile.dart`
+✔️ Persistent storage using Shared Preferences
 
-**Getting Started**
-- **Prerequisites:** `Flutter` >= 3.x, `Dart` SDK, and a platform toolchain for Android/iOS if you plan to build native apps.
-- **Clone:** `git clone https://github.com/dev-muzamil/TaskManagementApp.git`
-- **Open project:** `cd taskmanagementapp`
-- **Install deps:** `flutter pub get`
-- **Run (debug):** `flutter run`
+✔️ Native Splash Screen using flutter_native_splash
 
-**Build**
-- **Android (APK):** `flutter build apk --release`
-- **Android (App bundle):** `flutter build appbundle`
-- **iOS:** `flutter build ios` (requires macOS + Xcode)
-- **Web:** `flutter build web`
+✔️ Clean and minimal UI
 
-**Features**
-- **Add / Remove tasks:** Create, complete, and remove simple tasks.
-- **Local persistence:** Uses `shared_preferences` to persist tasks locally.
-- **Responsive UI:** Basic, clean UI with reusable widgets in `lib/widgets`.
-- **Custom splash screen:** Integrated `flutter_native_splash` and generated splash assets for Android, iOS, and Web.
+✔️ Fast and lightweight
 
-**Project Structure**
-- **`lib/`**: Application source code.
-- **`lib/main.dart`**: App entrypoint.
-- **`lib/models/task.dart`**: Task model definition.
-- **`lib/screens/home_screen.dart`**: Home screen with task list and add UI.
-- **`lib/widgets/task_tile.dart`**: Reusable task tile widget.
-- **`assets/`**: App assets such as `assets/logo.png` used for splash and branding.
+✔️ Cross-platform: Android, iOS, Web
 
-**Important Files**
-- **`pubspec.yaml`**: Project dependencies and assets (includes `flutter_native_splash` and `shared_preferences`).
-- **`README.md`**: This file.
+📂 Project Structure
 
-**Dependencies (high-level)**
-- `shared_preferences` — local persistence for simple data storage.
-- `flutter_native_splash` — generates native splash screen assets and config.
+lib/
+│── main.dart
+│── screens/
+│     └── home_screen.dart
+│── widgets/
+│     └── task_tile.dart
+│── models/
+│     └── task.dart
+assets/
+│── logo.png
 
-**Splash Screen Notes**
-- The native splash is configured in `pubspec.yaml` under `flutter_native_splash` and uses `assets/logo.png` as the splash image.
-- To regenerate splash assets after editing `pubspec.yaml` or the logo, run:
+🧩 Dependencies
 
-```
-flutter pub run flutter_native_splash:create
-```
+This project uses the following dependencies:
 
-**Testing**
-- Run unit/widget tests: `flutter test`
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.2.2
 
-**Contribution**
-- Feel free to open issues or submit pull requests.
-- Keep changes focused and include a short description in your PR.
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_native_splash: ^2.4.0
 
-**License & Contact**
-- This repository currently has no explicit license file. Add a `LICENSE` if you want to open-source under a specific license.
-- Contact: `dev-muzamil` (see GitHub profile)
+🖼 Splash Screen Configuration
 
-**Notes / Next Steps**
-- Add screenshots under `assets/` and reference them here for better README UI.
-- Add CI (GitHub Actions) for tests and building release artifacts.
+Already included in your pubspec.yaml:
 
-Thank you for using the Task Management App — reach out if you want help adding features or CI.
+flutter_native_splash:
+  color: "#5E35B1"
+  image: assets/logo.png
+  android: true
+  ios: true
+  web: true
+  android_12:
+    image: assets/logo.png
+    icon_background_color: "#5E35B1"
+
+To apply the splash screen, run:
+
+>flutter pub get
+>flutter pub run flutter_native_splash:create
+
+🛠 Installation & Setup
+
+1️⃣ Clone the repo
+
+>git clone https://github.com/dev-muzamil/taskmanagementapp.git
+
+2️⃣ Install dependencies
+
+>flutter pub get
+
+3️⃣ Run the splash setup
+
+>flutter pub run flutter_native_splash:create
+
+4️⃣ Run the app
+
+>flutter run
+
+🎨 Assets
+
+Place your logo here:
+
+assets/logo.png
+
+Already included in pubspec:
+assets:
+  - assets/logo.png
+
+🧑‍💻 About the Project
+
+This project is created for learning Flutter fundamentals while building a practical Task Management application with persistence, UI design, and native splash screens.
