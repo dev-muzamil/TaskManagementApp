@@ -60,28 +60,24 @@ flutter_native_splash:
     image: assets/logo.png
     icon_background_color: "#5E35B1"
 
-To apply the splash screen, run:
-
->flutter pub get
->flutter pub run flutter_native_splash:create
 
 🛠 Installation & Setup
 
 1️⃣ Clone the repo
 
->git clone https://github.com/dev-muzamil/taskmanagementapp.git
+git clone https://github.com/dev-muzamil/taskmanagementapp.git
 
 2️⃣ Install dependencies
 
->flutter pub get
+flutter pub get
 
 3️⃣ Run the splash setup
 
->flutter pub run flutter_native_splash:create
+flutter pub run flutter_native_splash:create
 
 4️⃣ Run the app
 
->flutter run
+flutter run
 
 🎨 Assets
 
